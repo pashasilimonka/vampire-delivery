@@ -1,0 +1,71 @@
+/* Включіть кольори з вашої палітри */
+:root {
+    --color-1: #eb634c;
+    --color-2: #dc6c53;
+    --color-3: #771c0d;
+    --color-4: #a58a7a;
+    --color-5: #ccbca4;
+    --color-6: #4b3c35;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .login-form {
+    background-color: var(--color-6);
+    color: var(--color-5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-form h2 {
+    color: var(--color-1);
+  }
+  
+  .login-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form label {
+    margin: 10px 0 5px;
+  }
+  
+  .login-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-2);
+    border-radius: 5px;
+  }
+  
+  .login-form button {
+    background-color: var(--color-1);
+    color: var(--color-5);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: var(--color-2);
+  }
+
+  a {
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+    color: #777;
+  }
+
+  a:hover {
+    color: var(--color-1);
+  }
+  

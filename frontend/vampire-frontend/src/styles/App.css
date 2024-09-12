@@ -1,0 +1,120 @@
+/* Загальні стилі */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-image: url("../images/background.jpg"); */
+  background-color: var(--color-6);
+  color: var(--color-5);
+  line-height: 1.6;
+}
+
+/* Заголовок */
+header {
+  border-radius: 10px;
+  background-color: var(--color-4);
+  color: var(--color-5);
+  padding: 10px 0;
+  text-align: center;
+}
+
+.logo-container {
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 300px; /* Налаштуйте розмір логотипу за необхідністю */
+  height: auto;
+  display: block; /* Переконайтесь, що зображення відображається як блок */
+  margin: 0 auto; /* Вирівнює зображення по центру */
+}
+
+.logo-container p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+/* Основний контейнер */
+.container {
+  padding: 20px;
+}
+
+/* Блоки контенту */
+.content-block {
+  margin-bottom: 30px;
+}
+
+.content-block h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--color-1);
+}
+
+.content-block p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Заклик до дії (CTA) */
+.cta {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--color-4);
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: var(--color-2);
+}
+
+.cta button {
+  background-color: var(--color-1);
+  color: var(--color-6);
+  padding: 15px 30px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button {
+  background-color: var(--color-1);
+  color: var(--color-2);
+  padding: 15px 30px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Футер */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: var(--color-1);
+  text-decoration: none;
+}
+
+/* Кольорові змінні */
+:root {
+  --color-1: #eb634c; /* Рожевий */
+  --color-2: #dc6c53; /* Помаранчевий */
+  --color-3: #771c0d; /* Темно-коричневий */
+  --color-4: #a58a7a; /* Бежевий */
+  --color-5: #ccbca4; /* Світло-бежевий */
+  --color-6: #4b3c35; /* Темно-коричневий */
+}

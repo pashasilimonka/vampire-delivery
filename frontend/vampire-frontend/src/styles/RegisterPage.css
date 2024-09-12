@@ -1,0 +1,60 @@
+/* App.css */
+
+:root {
+  --color-1: #eb634c;
+}
+
+.registration-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.registration-container h2 {
+  margin-bottom: 20px;
+  color: var(--color-1);
+}
+
+.registration-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-container label {
+  margin-bottom: 15px;
+}
+
+.registration-container input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.registration-container button {
+  background-color: var(--color-1);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.registration-container button:hover {
+  background-color: #dc6c53;
+}
+
+.registration-container a {
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+  color: #777;
+}
+
+.registration-container a:hover {
+  color: var(--color-1);
+}
