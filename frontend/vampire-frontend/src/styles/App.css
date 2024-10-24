@@ -1,5 +1,6 @@
 /* Загальні стилі */
 body {
+  height: 100%;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
@@ -8,31 +9,58 @@ body {
   color: var(--color-5);
   line-height: 1.6;
 }
+.app-container {
+  display: flex;
+  flex-direction: column; /* Встановлюємо вертикальне вирівнювання */
+  min-height: 100vh; /* Мінімальна висота - 100% висоти вікна */
+}
+
+.main-content {
+  flex: 1; /* Основний контент займає все доступне місце */
+}
 
 /* Заголовок */
 header {
   border-radius: 10px;
   background-color: var(--color-4);
   color: var(--color-5);
-  padding: 10px 0;
-  text-align: center;
+  padding: 10px 20px; /* Змінено для відступу по боках */
+  display: flex; /* Використовуємо flexbox для вирівнювання елементів */
+  align-items: center; /* Вирівнюємо елементи по вертикалі */
+  justify-content: space-between; /* Простір між логотипом і посиланнями */
 }
 
 .logo-container {
-  margin-bottom: 10px;
+  margin-bottom: 0; /* Видаляємо зайвий відступ знизу */
 }
 
 .logo {
-  width: 300px; /* Налаштуйте розмір логотипу за необхідністю */
+  width: 150px; /* Зменшено розмір логотипу */
   height: auto;
-  display: block; /* Переконайтесь, що зображення відображається як блок */
-  margin: 0 auto; /* Вирівнює зображення по центру */
+  display: block;
+  margin: 0; /* Вирівнювання по лівому краю */
 }
 
-.logo-container p {
-  margin: 5px 0;
-  font-size: 1.2rem;
+nav {
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Більший проміжок між посиланнями */
+    margin: 0; /* Видаляємо відступи списку */
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-6);
+    font-size: 1.5rem; /* Збільшуємо розмір шрифту для посилань */
+    font-weight: bold; /* Додаємо жирний текст для виділення */
+    
+    &:hover {
+      color: var(--color-3); /* Зміна кольору при наведенні */
+    }
+  }
 }
+
 /* Основний контейнер */
 .container {
   padding: 20px;
@@ -89,11 +117,7 @@ button {
   border-radius: 5px;
 }
 
-/* Футер */
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   background-color: #222;
   color: #fff;
   text-align: center;

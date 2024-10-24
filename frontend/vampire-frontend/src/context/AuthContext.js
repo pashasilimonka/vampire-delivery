@@ -7,6 +7,7 @@ const AuthContext = createContext();
 // Провайдер контексту авторизації
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Функція для входу
   const login = (token) => {
@@ -44,7 +45,12 @@ export function AuthProvider({ children }) {
         logout();
       }
     }
+    setIsLoading(false);
   }, []);
+  
+  if (isLoading) {
+    return <div>Loading...</div>; // Показуємо спінер або інший компонент під час завантаження
+  }
 
   return (
     <AuthContext.Provider value={{ user, login, logout }}>

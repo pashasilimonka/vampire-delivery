@@ -10,7 +10,6 @@ from config.database import SessionLocal
 
 app = FastAPI()
 app.include_router(auth.router)
-
 origins = [
     "http://localhost:3000"
 ]
@@ -20,8 +19,8 @@ app.add_middleware(
     allow_origins=origins,  # Список доменів, з яких дозволені запити
     allow_credentials=True,
     allow_methods=["*"],  # Дозволяє всі HTTP методи
-    allow_headers=["*"],  # Дозволяє всі заголовки
-)
+    allow_headers=["*"],
+)# Дозволяє всі заголовки
 def get_db():
     db = SessionLocal()
     try:

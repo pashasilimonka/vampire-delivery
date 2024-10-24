@@ -1,7 +1,6 @@
-import { useAuth } from "../context/AuthContext";
 
 function AboutUs() {
-    const { logout } = useAuth();
+   
     return(
         <div className="container">
         <div className="content-block">
@@ -18,7 +17,6 @@ function AboutUs() {
           <h2>Спробуйте наші послуги!</h2>
           <button onClick={() => alert('Скоро ви отримаєте свою першу доставку!')}>Замовити зараз</button>
         </div>
-        <button onClick={()=>logout()}>Вийти</button>
       </div>
     );
 }

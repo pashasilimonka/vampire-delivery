@@ -19,7 +19,7 @@ function Login() {
 
     console.log(JSON.stringify({username,password}))
     try {
-      const response = await fetch('http://127.0.0.1:8000/auth/token', {
+      const response = await fetch('http://127.0.0.1:8000/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,7 +35,14 @@ function Login() {
       const data = await response.json();
       login(data.access_token);
       const decoded = jwtDecode(data.access_token);
-      navigate(decoded.role === 'ADMIN' ? '/admin-dashboard' : '/user-dashboard'); // Редірект в залежності від ролі
+      navigate(
+        decoded.role === 'ADMIN' 
+          ? '/admin-dashboard' 
+          : decoded.role === 'WAITER' 
+            ? '/waiter-dashboard' 
+            : '/main'
+      );
+      
     } catch (err) {
       setError(err.message);
     } finally {

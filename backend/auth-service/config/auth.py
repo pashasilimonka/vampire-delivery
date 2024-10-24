@@ -70,8 +70,6 @@ async def create_user(db: db_dependency,
         role=create_user_model.role,
         expires_delta=timedelta(minutes=60)
     )
-
-
     return {"access_token": token, "token_type": "bearer"}
 
 
@@ -101,6 +99,19 @@ async def login_for_access_token(form_data: LoginRequest,
 
     return {'access_token': token, 'token_type': 'bearer'}
 
+
+@router.post("/verify-token")
+async def verify_token(data: dict):
+    token = data.get("token")
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        username: str = payload.get("sub")
+        user_id: str = payload.get("id")
+        if username is None or user_id is None:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
+        return {"username": username, "id": user_id}
+    except JWTError:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
 
 def authenticate_user(username: str, password: str, db: db_dependency):
     user = db.query(User).filter(User.username == username).first()

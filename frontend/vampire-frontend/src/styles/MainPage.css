@@ -1,0 +1,67 @@
+.meals-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .meals-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .meal-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для створення об’єму */
+
+  }
+  
+  .meal-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .meal-card p {
+    font-size: 1rem;
+  }
+
+  .meal-image {
+    width: 100%;
+    max-width: 300px; /* Максимальна ширина зображення */
+    height: auto; /* Автоматичне збереження пропорцій */
+    border-radius: 10px; /* Закруглені кути */
+    object-fit: cover; /* Обрізає зображення, щоб заповнити контейнер */
+    transition: transform 0.3s ease-in-out; /* Анімація для ефекту при наведенні */
+}
+
+.meal-image:hover {
+    transform: scale(1.05); /* Трохи збільшує зображення при наведенні */
+}
+
+.meal-actions {
+    margin-top: 10px;
+  }
+  
+  .add-to-cart-button, .order-now-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: var(--color-3); /* Червоний фон */
+    color: white; /* Білий текст */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart-button:hover, .order-now-button:hover {
+    background-color: var(--color-5); /* Темніший відтінок при наведенні */
+  }
+  
+  .order-now-button {
+    background-color: var(--color-5); /* Зелений фон для замовлення */
+  }
+  
+  .order-now-button:hover {
+    background-color: var(--color-2); /* Темніший зелений при наведенні */
+  }
