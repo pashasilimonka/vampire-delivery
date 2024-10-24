@@ -1,0 +1,11 @@
+venv/
+.env/
+__pycache__/
+*.py[cod]
+
+# Ігноруємо бібліотеки, якщо у вас є папка з ними
+lib/
+libs/
+*.egg-info/
+dist/
+build/
